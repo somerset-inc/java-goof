@@ -28,10 +28,8 @@ jobs:
         - name: Install mvn dependencies
           run: mvn clean install
 
+        - uses: snyk/actions/setup@master
         - name: Test Open Source Dependencies with Snyk
-          uses: snyk/actions/maven@master
+          run: snyk test --all-projects
           env:
             SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          with:
-            command: test
-            args: --all-projects
