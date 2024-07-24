@@ -20,7 +20,7 @@ jobs:
             java-version: '17'
             distribution: 'temurin'
             architecture: x64
-            cache: maven
+            cache: 'maven'
 
         - name: Run the Maven verify phase
           run: mvn --batch-mode --update-snapshots verify
