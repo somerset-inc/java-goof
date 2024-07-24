@@ -24,6 +24,9 @@ jobs:
         - name: Run the Maven verify phase
           run: mvn --batch-mode --update-snapshots verify
 
+        - name: Install mvn dependencies
+          run: mvn clean install
+
         - name: Test Open Source Dependencies with Snyk
           uses: snyk/actions/maven-3-jdk-17@master
           env:
