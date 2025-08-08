@@ -63,3 +63,5 @@ webencodings==0.5.1
 Werkzeug==0.14.1
 widgetsnbextension==3.4.2
 xlrd==1.1.0
+fonttools>=4.43.0 # not directly required, pinned by Snyk to avoid a vulnerability
+pillow>=10.3.0 # not directly required, pinned by Snyk to avoid a vulnerability
